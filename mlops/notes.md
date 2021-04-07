@@ -1,4 +1,10 @@
 ```
+# mlops scaffold <cloud platform> <name>
+
+$ mlops scaffold azure mlppoc
+```
+
+```
 ml/
 	infra/
 		deploy.json
@@ -36,14 +42,16 @@ ml/
 				from pipeline.score import something
 				someting(data)
 	test/
-		pipelines/
-			test_clean.py
-			test_features.py
-			test_train.py
-			...
+		pipeline/
+			preprocessing/
+				test_init.py
+				...
+			train/
+				test_init.py
+				...
 		test_init.py
 	integration_test/
-		...
+		test_integration.py
 ```
 
 resources:
